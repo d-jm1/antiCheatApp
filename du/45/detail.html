@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/new_file.js"></script>
+		<style>
+			* {
+				margin: 10px;
+				padding: 0px;
+			}
+
+			.list-text h1 {
+				font-size: 30px;
+				margin-bottom: 20px;
+				text-align: center;
+			}
+
+			.list-text h2 {
+				font-size: 24px;
+				text-align: center;
+			}
+
+			.list-text p {
+				font-size: 12px;
+				line-height: 1.5;
+				text-align: justify;
+			}
+
+			h5 {
+				font-size: 35px;
+				text-align: left;
+			}
+
+			.comment-box {
+				margin-bottom: 20px;
+			}
+
+			textarea {
+				width: 100%;
+				height: 100px;
+				padding: 8px;
+				font-size: 36px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				resize: none;
+			}
+
+			button {
+				/* display: block; */
+				float: left;
+				margin-top: 80px;
+				padding: 6px 10px;
+				font-size: 16px;
+				font-weight: bold;
+				color: #fff;
+				background-color: #337ab7;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				width: 70px;
+				height: 50px;
+			}
+
+			button:hover {
+				background-color: #23527c;
+			}
+			.heart-icon {
+			  position: absolute;
+			  top: 60px;
+			  left: 20px;
+			  width: 20px;
+			  height: 20px;
+			  background: #e74c3c;
+			  transform: rotate(45deg);
+			  transform-origin: center;
+			  border-radius: 50% 50% 0 50%;
+			  transition: all 0.3s ease-out 0s;
+			}
+			.heart-icon::before,
+			.heart-icon::after {
+			  content: '';
+			  position: absolute;
+			  background-color: #e74c3c;
+			  border-radius: 50%;
+			}
+			.heart-icon:before {
+			  top: -10px;
+			  left: 0;
+			  width: 20px;
+			  height: 20px;
+			}
+			.heart-icon:after {
+			  top: 0;
+			  left: -10px;
+			  width: 20px;
+			  height: 20px;
+			}
+			.heart-icon.animate {
+			  transform: rotate(45deg) scale(1.5);
+			  opacity: 0;
+			}
+			.heart{
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="list">
+				<div class="list-text">
+					<h1>反诈骗安全知识!</h1>
+					<h2>1.戒除贪婪，勿信“天上掉馅饼”</h2>
+					<p>不要听信陌生人的花言巧语，贪图优惠和方便，办理业务要到正规的营业厅。同学们切勿贪小便宜，遇到上门推销不要轻易购买；化妆品、洗发水、运动鞋或笔记本电脑等物品，骗子极有可能采用伪劣产品或以数量短缺等方式进行诈骗。
+					</p>
+					防止银行卡诈骗、网上诈骗、电话诈骗，不要相信未经核实的退学费、中奖、捐助等信息、电话，不要贪图小利以免上当受骗。
+					<h2>2.信息保密，勿泄个人家人密</h2>
+					<p>不要随意告知陌生人自己的个人情况、手机号码以及家中的电话号码等，手机中父母、亲戚的电话最好用真名显示，不要出现容易透露出双方关系的字眼。不要把自己的个人信息和家庭联系方式轻易示人，不要将自己的手机、身份证、学生证、校园卡、银行卡等重要物品借给他人使用或交于他人保管。不要填写各种来历不明的表格，不要随意扫描陌生的二维码，以防信息泄露，给不法分子实施诈骗等违法活动以可乘之机。
+					</p>
+					<h2>3.提高警惕，勿信不明证件物</h2>
+					<p>一些犯罪分子为了博取同学的信任，会提供伪造的证件(如学生证、身份证)，所以同学们一定要仔细辨别真伪，防止上当受骗。</p>
+					<img src="img/66.png" style="display: block;margin: 0 auto;">
+					<h2>4.及时沟通，勿让骗子钻空子</h2>
+					<p>参加社会实践、勤工俭学、实习、求职等到学习和工作场所之外的地点赴约、面试、就餐时，保持通讯畅通，牢记紧急求助电话。与家长约定好汇款条件、方式，让家长不要草率寄钱。凡是涉及钱财往来，或要求在规定时间到指定地点的行为，必须三思而后行，至少应该先向家长或辅导员老师打个电话确认后再决定是否行动。
+					</p>
+					<h2>5.消息通畅，勿使联络有盲区</h2>
+					<p>经常把自己在学校的情况告诉家长，使家长一旦遇到情况能够迅速辨别真伪。不要单独与陌生人外出，即使是与同学朋友老乡有事外出也一定要向老师、家长或同班告知。</p>
+					<hr>
+				</div>
+			</div>
+		</div>
+		<h5>发表评论</h5>
+		<!--        <div>
+			<img src="img/77.png" style="float: left; width: 100px;height: auto;">
+			<textarea style="margin-left:2vh; float: left; width: 32vh;height:5vh;"></textarea>
+
+		</div> -->
+		<div class="heart">
+			<button id="like-btn" class="like-btn">
+				<span class="heart-icon"></span>
+			</button>
+		</div>
+		<br>
+		<div id="comment-list"></div>
+		<!-- 评论输入框 -->
+		<div class="comment-box">
+			<textarea style="margin-left:2vh; float: left; width: 32vh;height:5vh;" id="comment-text"
+				placeholder="发表一下评论吧"></textarea>
+			<button onclick="addComment()">发送</button>
+		</div>
+		<!-- 评论列表 -->
+
+	</body>
+	<script>
+		// 获取评论输入框和评论列表元素
+		const commentText = document.getElementById('comment-text');
+		const commentList = document.getElementById('comment-list');
+
+		// 定义添加评论函数
+		function addComment() {
+			// 获取评论文本
+			const commentContent = commentText.value;
+
+			// 如果评论文本为空，则不做任何操作
+			if (!commentContent) {
+				return;
+			}
+
+			// 创建评论元素
+			const comment = document.createElement('div');
+			comment.innerText = commentContent;
+
+			// 将评论添加到评论列表中
+			commentList.appendChild(comment);
+
+			// 清空评论输入框
+			commentText.value = '';
+		}
+	</script>
+</html>
